@@ -18,10 +18,11 @@
     }
     body,html{
         height: 100%;
-        
+        background-color: #333;
     }
     section{
         padding: 5px 0;
+        background-color: #fff;
     }
 
     #perfil {
@@ -37,6 +38,8 @@
     #perfil img {
         height: 100%;
         margin: auto;
+        border: #8f6666 solid 5px;
+        border-radius: 10px;
     }
 
     #foto {
@@ -48,6 +51,7 @@
         font-family: 'Oswald', sans-serif;
         font-family: 'Oxygen', sans-serif;
         margin: auto;
+        font-size: clamp(13px, 1vw, 18px);
         
     }
     #dados p{
@@ -55,27 +59,31 @@
         padding: 0 ;       
 
     }
-    /*#corpo{
-        width: 80%;
-        margin: auto;
-
-    }*/
+    #corpo{
+        height: 100%;
+    }
     h2{
         color: #333;
         background-color: #cecece;
         padding: 5px 20px;
         font-size: 18px;
         text-transform: uppercase;
-        
+        font-size: clamp(14px, 1vw, 18px);
     }
     p{
         text-align: justify;
         padding: 0 20px;
+        font-size: clamp(10px, 1vw, 18px);
+        
+    }
+    li{
+        font-size: clamp(10px, 1vw, 18px);
+        margin-top: 8px;
     }
 </style>
 
-<body>
-    <section id="corpo">
+<body onload="telaMonitor()">
+    <section id="corpo" style="padding-top: 0;">
         <section id="perfil">
             <div id="foto">
                 <img src="imagem/personagem.png" alt="fotoPerfil">
@@ -133,25 +141,49 @@
             <p>Sou proativo, aplicado e dedicado, gosto de desafios e busco sempre a melhoria continua. Sou habituado a
                 trabalhar sobre pressão e geração de resultados.</p>
         </section>
-        <section>
+        <section style="padding-bottom: 15px;">
             <br><h2>Cursos complementares</h2><br>
 
             <ul>
-                <li>NR-23 - Brigadista eventual (15/08/2022 a 17/08/2022 - carga horária 20h)</li>
-                <li>PDL - Programa de desenvolvimentos de liderança (09/11/2021 a 05/04/2022 - carga horária 24h)</li>
-                <li>PDL - Programa de desenvolvimentos de liderança - chão de fábrica (21/11/2019 a 21/11/2019 - carga
-                    horária
-                    de 8h)</li>
-                <li>Gestão de mudanças – desenvolvimento de pessoas(27/11/2019 a 27/11/2019 - carga horária de 08h)</li>
-                <li>PDL – Programa de desenvolvimentos de liderança (07/09/2016 a 16/09/2016 – 24h)</li>
-                <li>Treinamento de NR12 (04/10/2019 a 10/10/2019 - carga horária de 10h)</li>
-                <li>Treinamento de NR35 (08/12/2017 a 08/12/2017 - carga horária de 08h)</li>
-                <li>Treinamentos de lideres engajadores (16/12/2016 a 16/12/2016)</li>
-                <li>Curso de operador de empilhadeira (02/03 e 07/05/2006)</li>
+                <li>Inteligência emocional (01/09/2023 a 13/09/2023 - carga de 06h).</li>
+                    <li>Treinamento sobre gerenciamento de rotina (21/08/2023 a 21/08/2023 - carga horária de 4h).</li>
+                    <li>Conhecimento sobre lean manufacturing, com ênfase em soluções de problemas - (10/07/2023 a
+                        10/07/2023 - carga horária de 09h).</li>
+                    <li>Tratamentos de Não conformidades (03/11/2022 a 03/11/2022 - carga horário 8h).</li>
+                    <li>Treinamento de 5s - (28/10/2022 a 28/10/2022 - carga horária de 8h).</li>
+                    <li>NR -23 – Brigadista enventual (15/08/2022 a 17/08/2022 – carga horária 20h).</li>
+                    <li>PDL – Programa de desenvolvimentos de liderança (09/11/2021 a 05/04/2022/2022 – carga horária de
+                        24h).</li>
+                    <li>Gestão de mudanças – desenvolvimento de pessoas (27/11/2019 a 27/11/2019 - carga horária de
+                        08h).</li>
+                    <li>Liderança no chão de fábrica (21/11/2019 a 27/11/2019 - carga horária de 8h).</li>
+                    <li>Treinamento de NR 12 (04/10/2019 a 10/10/2019 - carga horária de 10h).</li>
+                    <li>Treinamento de NR35 (08/12/2017 a 08/12/2017 - carga horária de 08h).</li>
+                    <li>Treinamento de desenvolvimento de líderes (supervisores) (09/05/2017 a 10/08/2017 - carga
+                        horária de
+                        21h).</li>
+                    <li>Treinamentos de lideres engajadores (16/12/2016 a 16/12/2016).</li>
+                    <li>Treinamento de desenvolvimento de líderes (supervisores) (07/07/2016 a 16/09/2016 - carga
+                        horária de
+                        24h).</li>
+                    <li>Curso de operador de empilhadeira (02/03 e 07/05/2006).</li>
             </ul>
         </section>
     </section>
 
+
 </body>
+<script>
+    tela = window.screen.width;
+    function telaMonitor(){
+        if (tela >= 1000){
+            corpo = document.getElementById('corpo');
+            corpo.style.width = "80%";
+            corpo.style.margin = "auto";
+            corpo.style.boxShadow = "#333 0 0 10px";
+            
+        }
+    }
+</script>
 
 </html>
